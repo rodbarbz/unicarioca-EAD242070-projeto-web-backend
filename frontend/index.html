@@ -1,13 +1,57 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <link href="https://fonts.googleapis.com/css2?family=NomeDaFonte:wght@400;700&display=swap" rel="stylesheet"> <!-- Link para a fonte -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Meus Projetos</h1>
+    </header>
+
+    <section id="projects-list">
+        <h2>Projetos</h2>
+        <div id="projects-container"></div>
+    </section>
+
+    <footer>
+        <p>© 2024 Seu Nome ou Sua Empresa</p>
+    </footer>
+</div>
+
+<script>
+    // Função para obter e exibir os projetos
+    async function fetchProjects() {
+        try {
+            const response = await fetch('http://localhost:5000/projects');
+            const projects = await response.json();
+
+            const projectsContainer = document.getElementById('projects-container');
+            projectsContainer.innerHTML = ''; // Limpa o conteúdo anterior
+
+            projects.forEach(project => {
+                const projectElement = document.createElement('div');
+                projectElement.classList.add('project');
+                projectElement.innerHTML = `
+                    <h3>${project.name}</h3>
+                    <p>${project.description}</p>
+                    <a href="/projects/${project._id}">Ver Detalhes</a>
+                `;
+                projectsContainer.appendChild(projectElement);
+            });
+        } catch (error) {
+            console.error('Erro ao buscar os projetos:', error);
+        }
+    }
+
+    // Chama a função ao carregar a página
+    window.onload = fetchProjects;
+</script>
+
+</body>
 </html>
