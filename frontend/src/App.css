@@ -1,42 +1,113 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.menu {
+  display: flex;
+  align-items: center;
+  background-color: #0cc0df;
+  width: 100%;
+  height: 100px;
+}
+
+.menu a {
+  margin-left: 15px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  display: flex;
+  align-items: center;
+  font-family: Impact;
+  color: white;
+  font-size: 48px;
+  margin-left: 40%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo img {
+  width: 90px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.botoes button{
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 90px;
+  margin: 20px;
+  background-color: #0cc0df;
+  color: white;
+  font-size: 22px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.card {
-  padding: 2em;
+.botoes a{
+  text-decoration: none;
+  color: white;
 }
 
-.read-the-docs {
-  color: #888;
+.creditos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.creditos p {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.nomes {
+  align-items: center;
+}
+
+.nomes h2 a{
+  padding: 1px;
+  margin-left: 70px;
+}
+
+.nomes img {
+  margin-left: 60px;
+  width: 40px;
+  margin-left: 5px;
+}
+
+.dadosFuncionalidade {
+  padding: 0;
+  height: 100px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.dadosFuncionalidade label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 25%;
+  border: 1px solid black;
+}
+
+.dadosFuncionalidade input {
+  margin: 0;
+  padding: 0;
+  width: 75%;
+  height: 100%;
+}
+
+.dadosProjeto {
+  padding: 0;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+
+}
+
+.dadosFuncionalidade button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 90px;
+  margin: 20px;
+  background-color: #0cc0df;
+  color: white;
+  font-size: 22px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
