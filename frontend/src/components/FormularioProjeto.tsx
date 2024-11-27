@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import axios from 'axios'
 
 export function FormularioProjeto(){
@@ -20,7 +20,7 @@ export function FormularioProjeto(){
     const handleSubmit = async (e: { preventDefault: () => void;}) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://127.0.0.1:5000/projects-insert', {
+            const response = await axios.post('http://127.0.0.1:5002/projects', {
                 nomeProjeto,
                 responsavel,
                 email,
@@ -76,14 +76,15 @@ export function FormularioProjeto(){
                         />
                     </div>
                     <br />
-                    {/* <div className="dadosProjeto">
+                    <div className="dadosProjeto">
                         <label>Descrição:</label>
                         <textarea
                         name="descricao"
                         value={descricao}
                         onChange={(e) => setDescricao(e.target.value)}
                         ></textarea>
-                    </div> */}
+                    </div>
+                    <br />
                     <button type="submit">Registrar</button>
                 </form>
             </div>
