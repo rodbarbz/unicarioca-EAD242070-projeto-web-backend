@@ -1,5 +1,11 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useId} from 'react'
 import axios from 'axios'
+
+
+function gerarId(){
+    const id = Math.floor(1000 + Math.random() * 9000)
+    return `#${id}`
+}
 
 export function FormularioProjeto(){
     const [nomeProjeto, setNomeProjeto] = useState('')
@@ -24,7 +30,9 @@ export function FormularioProjeto(){
                 nomeProjeto,
                 responsavel,
                 email,
-                dataHoje
+                dataHoje,
+                descricao,
+                idProjeto : gerarId()
             });
             console.log(response.data, nomeProjeto, responsavel)
         }
@@ -68,19 +76,11 @@ export function FormularioProjeto(){
                     </div>
                     <br />
                     <div className="dadosProjeto">
-                        <label>Data:</label>
-                        <input 
-                        type="date" 
-                        value={dataHoje}
-                        onChange={(e) => setDataHoje(e.target.value)}
-                        />
-                    </div>
-                    <br />
-                    <div className="dadosProjeto">
                         <label>Descrição:</label>
                         <textarea
                         name="descricao"
                         value={descricao}
+                        maxLength={1060}
                         onChange={(e) => setDescricao(e.target.value)}
                         ></textarea>
                     </div>

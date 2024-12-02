@@ -111,3 +111,98 @@
   font-size: 22px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.dadosProjeto,  textarea {
+  width: 75%;
+}
+
+.infosProjetoContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.infosProjeto {
+  position: relative;
+  margin: 20px;
+  padding: 20px;
+  font-size: 20px;
+  border: 1px solid black;
+  height: 306px;
+  min-width: 300px;
+}
+
+.infosProjeto input {
+  width: 300px;
+  height: 30px;
+}
+
+.infosProjeto textarea {
+  width: 75%;
+  height: 50%;
+}
+
+.assinaturaProjeto {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  font-size: 15px;
+  height: 50px;
+}
+
+.assinaturaProjeto p {
+  padding-right: 10px;
+
+}
+
+.idProjeto {
+  position: absolute;
+  top: 0;
+  padding-bottom: 20px;
+}
+
+.idProjeto h1 {
+  font-size: 20px;
+}
+
+.deletar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.deletar button {
+  background: none;
+}
+
+.editar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.editar button {
+  background: none;
+  border: none;
+}
+
+.editar img {
+  width: 24px;
+}
+
+.salvar {
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 90px;
+  padding: 0;
+  margin-bottom: 20px;
+  background-color: #0cc0df;
+  color: white;
+  font-size: 22px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

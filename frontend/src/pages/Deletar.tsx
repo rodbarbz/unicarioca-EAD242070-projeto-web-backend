@@ -1,11 +1,11 @@
-import { DadosDB } from "../components/DadosDB";
+import { DeletarDados } from "../components/DeletarDados";
 import { Navbar } from "../components/Navbar";
 
-export function Visualizar(){
+export function Deletar(){
     return (
         <>  
             <Navbar />
-            <DadosDB />
+            <DeletarDados />
         </>
     )
 }

@@ -3,6 +3,7 @@ import {Home} from "../pages/Home"
 import { Creditos } from "../pages/Creditos";
 import { Adicionar } from "../pages/Adicionar";
 import { Visualizar } from "../pages/Visualizar";
+import { Deletar } from "../pages/Deletar";
 
 
 export function AppRoutes(){
@@ -12,6 +13,7 @@ export function AppRoutes(){
             <Route path="/creditos" element={<Creditos />} />
             <Route path="/adicionar" element={<Adicionar />} />
             <Route path="/visualizar" element={<Visualizar />} />
+            <Route path="/deletar" element={<Deletar />} />
         </Routes>
     )
 }
