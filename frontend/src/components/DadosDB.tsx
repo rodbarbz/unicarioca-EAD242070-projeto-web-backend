@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import {useEffect, useState} from "react"
 import axios from "axios"
 import { format } from "date-fns"
 
@@ -17,7 +17,7 @@ export function DadosDB() {
     const [dados, setDados] = useState<Projeto[]>([]);
 
     useEffect(() => {
-        axios.get('http://192.168.1.12:5002/projects')
+        axios.get('http://127.0.0.1:5002/projects')
         .then(response => setDados(response.data))
         .catch(error => console.error('Error ao achar os dados: ', error))
     }, [])
